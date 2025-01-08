@@ -15,7 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -23,11 +23,11 @@
 <body <?php body_class(); ?>>
 
 <?php wp_body_open(); ?>
-<header>
+	<header>
         <div class="container">
             <div class="header">
                 <a href="#" class="logo">
-                    <img src="/img/logo.svg" alt="Interno Logo" />
+                    <img src="<?php echo get_site_url().'/logo' ?>" alt="Interno Logo" />
                 </a>
                 <nav>
                     <ul class="ul header__nav">
@@ -45,7 +45,7 @@
                         </li>
                         <li class="header__item">
                             <button class="header__search" onclick="openModal();">
-                                <img src='/img/icon/search-icon.svg' alt="Search button" />
+                                <img src="<?php echo get_site_url().'/search-icon' ?>" alt="Search button" />
                             </button>
                         </li>
                     </ul>
