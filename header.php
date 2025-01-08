@@ -26,9 +26,9 @@
 	<header>
         <div class="container">
             <div class="header">
-                <div class="logo">
+                <a href="/" class="logo">
                     <img src="<?php echo get_site_url().'/logo' ?>" alt="Interno Logo" />
-                </div>
+                </a>
                 <nav>
                     <ul class="ul header__nav">
                         <?php wp_nav_menu(
