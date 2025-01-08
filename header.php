@@ -26,23 +26,19 @@
 	<header>
         <div class="container">
             <div class="header">
-                <a href="#" class="logo">
+                <div class="logo">
                     <img src="<?php echo get_site_url().'/logo' ?>" alt="Interno Logo" />
-                </a>
+                </div>
                 <nav>
                     <ul class="ul header__nav">
-                        <li class="header__item">
-                            <a class="header__link" href="#">Home</a>
-                        </li>
-                        <li class="header__item">
-                            <a class="header__link" href="#">Our Projects</a>
-                        </li>
-                        <li class="header__item">
-                            <a class="header__link" href="#">Blog</a>
-                        </li>
-                        <li class="header__item">
-                            <a class="header__link" href="#">Contact</a>
-                        </li>
+                        <?php wp_nav_menu(
+                            array(
+                               'theme_location'  => 'header_nav',
+                               'menu_class' => "header__nav",
+                               'container' => false,
+                               
+                            )
+                        ); ?>
                         <li class="header__item">
                             <button class="header__search" onclick="openModal();">
                                 <img src="<?php echo get_site_url().'/search-icon' ?>" alt="Search button" />

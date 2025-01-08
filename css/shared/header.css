@@ -11,17 +11,19 @@
   align-items: center;
   /*hint: переопределим отступ по умолчанию для тега ul*/
   padding-left: 0;
+  list-style-type: none;
 }
 
 .header__item {
   margin-left: 48px;
+
 }
 
 .header__item:last-child {
   margin-left: 30px;
 }
 
-.header__link {
+.header__item a {
   color: #292f36;
   font-family: Jost, sans-serif;
   font-style: normal;
@@ -30,7 +32,7 @@
   text-decoration: none;
 }
 
-.header__link:hover {
+.header__item a:hover {
   color: #cda274;
 }
 
