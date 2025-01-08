@@ -20,6 +20,17 @@ function cc_mime_types( $mimes ){
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
+
+function interno_wp_register_menus() {
+	register_nav_menus( array(
+        'header__nav' => ( 'Header navigation'),
+		'footer__nav' => ( 'Footer navigation'),
+    ) );
+}
+
+
+add_action( 'after_setup_theme', 'interno_wp_register_menus', 0);
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
