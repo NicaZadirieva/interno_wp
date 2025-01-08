@@ -1,0 +1,79 @@
+.feedback-form-container {
+    padding: 0;
+}
+
+.feedback-confirm {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+}
+
+.feedback-confirm .checkbox:checked,
+.feedback-confirm .checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.feedback-confirm .checkbox:checked+label,
+.feedback-confirm .checkbox:not(:checked)+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.feedback-confirm .checkbox:checked+label::before,
+.feedback-confirm .checkbox:not(:checked)+label::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-color: transparent;
+    border: 2px solid rgb(205, 162, 116);
+    border-radius: 3px;
+}
+
+.feedback-confirm .checkbox:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-color: rgb(205, 162, 116);
+}
+
+.feedback-confirm label {
+    color: #CDA274;
+}
+
+/* Media */
+
+@media screen and (max-width: 1200px) {
+
+    .feedback-form-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .feedback-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .feedback-form__textarea,
+    .feedback-form__submit {
+        grid-column: 1 / 3;
+    }
+
+    .feedback-confirm {
+       display: flex;
+       width: 100%;
+    }
+    
+}

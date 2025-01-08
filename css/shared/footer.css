@@ -1,0 +1,81 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4D5053;
+    padding-top: 80px;
+    padding-bottom: 80px; 
+}
+
+.bg {
+    background: #F7F7F7;
+}
+.footer__contacts {
+    display: flex;
+    align-items: center;
+    /*hint: переопределим отступ по умолчанию для тега ul*/
+    padding-left: 0;
+}
+
+.contacts__item {
+    margin-left: 86px;
+}
+
+.contacts__link {
+    text-decoration: none;
+    color: #4D5053;
+}
+
+.contacts__link:hover {
+    color: #CDA274;
+}
+
+/* Media */
+
+@media (max-width: 1200px) {
+
+    ul.footer__contacts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0 50px;
+        padding: 0;
+    }
+
+    .contacts__item {
+        padding: 0;
+        text-align: right;
+    }
+
+    .contacts__item:has(.item__address) {
+        grid-row: 1 / 3;
+        text-align: start;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    ul.footer__contacts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contacts__item:has(.item__address) {
+        text-align: right;
+    }
+
+    .footer {
+        display: inherit;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .contacts__item, .contacts__item:has(.item__address) {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+}

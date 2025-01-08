@@ -1,0 +1,114 @@
+body {
+    font-family: "Jost", sans-serif;
+    /*hint: удаляем ненужный дефолтный отступ*/
+    margin: 0;
+    /*font-family: 'DM Serif Display', serif*/
+    background-image: url(/img/line.svg);
+    background-repeat: repeat-y;
+    font-size: 22px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*hint: безопасные расстояния*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 33px;
+}
+a.button-container {
+    text-decoration: none;
+}
+
+.button {
+    font-size: 18px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+    background: rgb(41, 47, 54);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 26px 31px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.p {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    margin-top: 150px;
+}
+
+.thumb {
+    position: relative;
+    overflow: hidden;
+    height: 356px;
+    width: 100%;
+}
+
+.thumb__title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.thumb__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    /*hint: меняю систему координат */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list-item__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media */
+
+@media screen and (max-width: 1200px) {
+    
+    body {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 900px;
+    }
+
+    .h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        max-width: 600px;
+    }
+
+    .page {
+        margin-top: 120px;
+    }
+}

@@ -1,0 +1,86 @@
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: -100vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 9999;
+    transition: .3s;
+}
+
+.modal-search, .modal {
+    padding-top: 47px;
+    padding-bottom: 47px;
+    background-color: #FFFFFF;
+}
+
+.modal-search__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 38px;
+}
+
+.modal-search__input {
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    flex-grow: 1; /*hint: вместо width: 100%*/
+    border: none;
+    color: #4D5053;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: .3s;
+}
+.modal-search__input:focus {
+    outline: none;
+    border-bottom-color: #CDA274;
+}
+.modal-search__submit, .modal-search__close {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-search__submit {
+    border-radius: 50%;
+    border: 1px solid rgb(205, 162, 116);
+    background-image: url('/img/icon/arrow-next-icon-2.svg');
+    background-position: center center;
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-size: 6px 14px; /*TODO: зачем размеры стрелки*/
+}
+
+.modal-search__close , .modal__close{
+    background-image: url('/img/icon/close-icon.svg');
+    background-color: transparent;
+    border: none;
+    width: 22px;
+    height: 22px;
+    display: block;
+    cursor: pointer;
+}
+.modal {
+    position: relative;
+}
+.modal__close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+.modal .header__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal .header__item {
+    margin: 0;
+    padding: 0;
+}

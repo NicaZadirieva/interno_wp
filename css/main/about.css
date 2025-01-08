@@ -1,0 +1,118 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    padding-top: 250px;
+    padding-bottom: 241px;
+}
+
+.about__tel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about__tel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about__tel-content p{
+    margin: 0;
+}
+
+.tel-content__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.tel-content__link:hover {
+    color: #CDA274;
+}
+.about__thumb {
+    position: relative;
+    overflow: hidden;
+    /*hint: это для текста внутри*/
+    border-radius: 0 clamp(100px, 40vh, 240px) 0 clamp(100px, 30vh, 240px);
+    height: 653px;
+    flex-grow: 1;
+    flex-basis: 700px;
+}
+
+.about__img {
+    /*hint: чтобы изображение (объект) вытянулся правильно*/
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about__tel__button {
+    border-radius: 50%;
+    border: 1px solid rgb(205, 162, 116);
+    background-image: url('/img/icon/phone-icon.svg');
+    background-position: center center;
+    display: block;
+    width: 93px;
+    height: 93px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.about__button {
+    margin-top: 47px;
+    display: block;
+}
+
+.about__text {
+    flex-basis: calc(100% - 700px);
+    flex-grow: 1;
+}
+/* Media */
+
+@media screen and (max-width: 1200px) {
+
+    .about {
+        padding: 0;
+        gap: 5%;
+    }
+
+    .about__text {
+        flex-basis: 45%;
+    }
+    .about__thumb {
+        flex-basis: 50%;
+    }
+
+    .about__text .h2 {
+        font-size: 37px;
+    }
+
+    .about__tel-content > a:first-child {
+        font-size: 20px;
+    }
+
+    .about__tel-content > a:last-child {
+        font-size: 18px;
+    }
+
+    .about__tel__button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about__button > .button {
+        font-size: 16px;
+        padding: 20px 21px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
