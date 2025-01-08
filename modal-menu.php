@@ -10,13 +10,7 @@
     <div class="overlay" id="overlay">
         <div class="modal-search">
             <div class="container">
-                <div class="modal-search__content">
-                    <input class='modal-search__input' type="text" placeholder="Search" />
-                    <button class='modal-search__submit' style="background-image: url('<?php echo get_site_url()."/arrow-next-icon-2" ?>');" type="submit">
-                    </button>
-                    <button style="background-image: url('<?php echo get_site_url()."/close-icon" ?>');" class='modal-search__close' type="button" onclick="closeModal();">
-                    </button>
-                </div>
+                <?php get_search_form() ?>
             </div>
         </div>
     </div>
