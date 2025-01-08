@@ -20,18 +20,6 @@ function cc_mime_types( $mimes ){
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
-function get_attachment_url_by_slug( $slug ) {
-  $args = array(
-    'post_type' => 'attachment',
-    'name' => sanitize_title($slug),
-    'posts_per_page' => 1,
-    'post_status' => 'inherit',
-  );
-  $_header = get_posts( $args );
-  $header = $_header ? array_pop($_header) : null;
-  return $header ? wp_get_attachment_url($header->ID) : '';
-}
-
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
