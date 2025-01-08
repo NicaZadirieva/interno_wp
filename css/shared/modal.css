@@ -47,7 +47,6 @@
 .modal-search__submit {
     border-radius: 50%;
     border: 1px solid rgb(205, 162, 116);
-    background-image: url('/img/icon/arrow-next-icon-2.svg');
     background-position: center center;
     display: block;
     width: 52px;
@@ -57,7 +56,6 @@
 }
 
 .modal-search__close , .modal__close{
-    background-image: url('/img/icon/close-icon.svg');
     background-color: transparent;
     border: none;
     width: 22px;
