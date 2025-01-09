@@ -33,7 +33,7 @@
                     <ul class="ul header__nav">
                         <?php wp_nav_menu(
                             array(
-                               'theme_location'  => 'header_nav',
+                               'theme_location'  => 'header__nav',
                                'menu_class' => "header__nav",
                                'container' => false,
                                
