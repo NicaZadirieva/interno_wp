@@ -17,11 +17,14 @@ get_header();
 <main>
     <?php 
         get_template_part("partials/main", "hero"); 
-        get_template_part("partials/main", "about"); 
-        get_template_part("partials/main", "slider"); 
+        
     ?>
 </main>
  <div class="container page">
+    <?php 
+        get_template_part("partials/main", "about"); 
+        get_template_part("partials/main", "slider"); 
+    ?>
 </div>
 <?php
 get_sidebar();
