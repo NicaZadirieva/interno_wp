@@ -14,7 +14,9 @@
 
 get_header();
 ?>
-
+<main>
+    <?php get_template_part("partials/main", "hero") ?>
+</main>
 <?php
 get_sidebar();
 get_footer();
