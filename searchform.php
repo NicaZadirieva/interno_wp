@@ -6,7 +6,7 @@
  */
 
 ?>
-<form class="modal-search__content" method="get" action='<?php echo home_url("/")?>'>
+<form class="modal-search__content" method="get" action='<?php echo esc_url(home_url("/"))?>'>
     <input class='modal-search__input' type="text" placeholder="Search" name="s" value="<?php the_search_query(); ?>"/>
     <button class='modal-search__submit' style="background-image: url('<?php echo get_site_url()."/arrow-next-icon-2" ?>');" type="submit">
     </button>
