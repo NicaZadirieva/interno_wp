@@ -54,7 +54,6 @@
 .about__tel__button {
     border-radius: 50%;
     border: 1px solid rgb(205, 162, 116);
-    background-image: url('/img/icon/phone-icon.svg');
     background-position: center center;
     display: block;
     width: 93px;

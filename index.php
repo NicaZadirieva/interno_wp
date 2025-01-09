@@ -15,8 +15,13 @@
 get_header();
 ?>
 <main>
-    <?php get_template_part("partials/main", "hero") ?>
+    <?php 
+        get_template_part("partials/main", "hero"); 
+        get_template_part("partials/main", "about"); 
+    ?>
 </main>
+ <div class="container page">
+</div>
 <?php
 get_sidebar();
 get_footer();
