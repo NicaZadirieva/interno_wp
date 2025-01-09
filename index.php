@@ -25,10 +25,14 @@ get_header();
         get_template_part("partials/main", "about"); 
         get_template_part("partials/main", "slider"); 
         get_template_part("partials/main", "brands"); 
-        get_template_part("partials/main", "stats"); 
-        get_template_part("partials/main", "articles"); 
-        get_template_part("partials/main", "newsletter"); 
-    ?>
+        get_template_part("partials/main", "stats"); ?>
+        <div class="container page">
+        <?php 
+            get_template_part("partials/main", "articles"); 
+            get_template_part("partials/main", "newsletter"); 
+            get_template_part("partials/main", "feedback");  
+        ?>
+        </div>
 </div>
 <?php
 get_sidebar();
