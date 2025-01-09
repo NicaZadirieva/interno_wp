@@ -14,7 +14,8 @@
 
 get_header();
 ?>
-<?php get_template_part('/modal-menu'); ?>
+
 <?php
 get_sidebar();
 get_footer();
+get_template_part('/modal-menu');
