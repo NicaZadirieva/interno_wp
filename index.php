@@ -26,6 +26,7 @@ get_header();
         get_template_part("partials/main", "slider"); 
         get_template_part("partials/main", "brands"); 
         get_template_part("partials/main", "stats"); 
+        get_template_part("partials/main", "articles"); 
     ?>
 </div>
 <?php
