@@ -47,7 +47,7 @@ a.button-container {
     padding: 0;
 }
 
-.page {
+.offset {
     margin-top: 150px;
 }
 
@@ -117,7 +117,7 @@ a.link:hover {
         max-width: 600px;
     }
 
-    .page {
+    .offset {
         margin-top: 120px;
     }
 }

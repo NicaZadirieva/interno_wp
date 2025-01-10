@@ -14,7 +14,7 @@ function interno_wp_enqueue_scripts() {
 
 	wp_register_style('interno-wp-style-index', get_template_directory_uri().'/css/main/index.css', array(), '2025-01-10', 'all');
 	
-	if (is_home()) {
+	if (is_home() || is_front_page()) {
 		wp_enqueue_style('interno-wp-style-index');
 	}
 }

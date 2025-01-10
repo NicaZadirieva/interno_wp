@@ -15,7 +15,7 @@
 	$item_phone = "1234567890";
 ?>
 
-	<footer class="bg page">
+	<footer class="bg offset">
         <div class="container">
             <div class="footer">
                 <a href="#" class="logo">
