@@ -5,9 +5,16 @@
      */
 ?>
 <?php
-    /**TODO: сделать изменяемыми через wordpress */
+
     /** VARIABLES */
-    $settings_meta = get_post_custom( 144 );
+    $recent_metadata_id = wp_get_recent_posts( [
+	'numberposts'      => 1,
+	'orderby'          => 'post_date',
+	'order'            => 'DESC',
+	'post_type'        => 'Main_settings'
+    ], OBJECT )[0]->ID;
+
+    $settings_meta = get_post_custom( $recent_metadata_id );
     $about_title = $settings_meta['about_title'][0];
     $about_text = $settings_meta['about_text'][0];
     $about_phone_number = $settings_meta['about_phone_number'][0];

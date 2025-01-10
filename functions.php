@@ -57,8 +57,7 @@ function interno_wp_register_post_type() {
 		'show_in_menu' => true,
         'has_archive' => true,
 		'show_in_rest' => true,
-		'menu_position' => 80,
-		'post_type' => 'settings'
+		'menu_position' => 80
 
 	);
 	register_post_type('Main_settings', $args);
