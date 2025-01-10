@@ -54,11 +54,11 @@
                     <span class="article_tag"><?php echo $article['tag']?></span>
                 </div>
                 <h3 class="article__title">
-                    <a href="<?php echo $article['link']?>"><?php echo $article['title']?></a>
+                    <a class="link" href="<?php echo $article['link']?>"><?php echo $article['title']?></a>
                 </h3>
                 <div class="article__info">
                     <span class="article__date"><?php echo $article['date']?></span>
-                    <a href="<?php echo $article['link']?>" class="article__link"></a>
+                    <a class="link article__link" href="<?php echo $article['link']?>"></a>
                 </div>
             </article>
         <?php endforeach;?>
