@@ -1,0 +1,300 @@
+/*feedback_form.css*/
+.feedback-form-container {
+    padding: 0;
+}
+
+.feedback-confirm {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+}
+
+.feedback-confirm .checkbox:checked,
+.feedback-confirm .checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.feedback-confirm .checkbox:checked+label,
+.feedback-confirm .checkbox:not(:checked)+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.feedback-confirm .checkbox:checked+label::before,
+.feedback-confirm .checkbox:not(:checked)+label::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-color: transparent;
+    border: 2px solid rgb(205, 162, 116);
+    border-radius: 3px;
+}
+
+.feedback-confirm .checkbox:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transition: all .2s ease;
+    opacity: 1;
+    left: 4px;
+    top: calc(50% - 6px);
+    background-color: rgb(205, 162, 116);
+}
+
+.feedback-confirm label {
+    color: #CDA274;
+}
+
+/* Media */
+
+@media screen and (max-width: 1200px) {
+
+    .feedback-form-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+/*post.css*/
+.content {
+    display: grid;
+    grid-template-columns: 1fr 345px;
+    gap: 52px;
+}
+
+.author__thumb {
+    /*hint: чтобы не сжималось изображение*/
+    flex-basis: 70px;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/*hint: позиционирование изображения*/
+.author__img {
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.author__head {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.author__name {
+    color: rgb(41, 47, 54);
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.author__role,
+.author__text {
+    color: rgb(77, 80, 83);
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.author__text {
+    margin-top: 51px;
+}
+
+/*********POST**************/
+.post__header h1 {
+    margin: 0;
+    margin-bottom: 11px;
+}
+
+.post__thumb {
+    position: relative;
+    overflow: hidden;
+    height: 607px;
+    width: 100%;
+    border-radius: 62px;
+    /*TODO: посмотреть как будет выглядеть в разных вариациях постов*/
+    margin-bottom: 48px;
+}
+
+.post__thumb img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    /*hint: меняю систему координат */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post h1 {
+    font-size: 50px;
+}
+
+.post ol {
+    list-style-type: none;
+    /* removes default bullets and numbers */
+    padding-left: 0;
+    /* removes left padding */
+}
+
+.post ol li {
+    position: relative;
+    counter-increment: list-item;
+    /* increments list item number */
+    margin-bottom: 32px;
+    margin-left: 19px;
+}
+
+.post ol li::before {
+    position: absolute;
+    left: -19px;
+    content: counter(list-item);
+    /* outputs the custom number */
+    color: rgb(205, 162, 116);
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.post p {
+    color: rgb(77, 80, 83);
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+span.post__date {
+    color: rgb(77, 80, 83);
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.post__body blockquote {
+    padding: 106px 227px 53px;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(205, 162, 116);
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    border-radius: 50px;
+    background: rgb(244, 240, 236);
+}
+
+.post__body blockquote::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("/img/icon/quote-icon.svg");
+    background-repeat: no-repeat;
+    width: 73px;
+    height: 53px;
+    left: 50%;
+    top: 53px;
+    transform: translateX(-50%);
+}
+
+.post__body figure {
+    margin: 0;
+}
+
+.post__body figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 62px;
+}
+
+.post__footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.post__footer-tags {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post__footer span {
+    color: rgb(0, 0, 0);
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    align-self: center;
+}
+
+.post__footer-end-line {
+    background-color: rgb(229, 229, 229);
+    margin: 44px 0;
+}
+
+
+
+.post__share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media */
+@media screen and (max-width: 1200px) {
+    /*post.css*/
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    /*feedback.css*/
+    .feedback-form {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-form__textarea,
+    .feedback-form__submit {
+        grid-column: 1 / 3;
+    }
+
+    .feedback-confirm {
+        display: flex;
+        width: 100%;
+    }
+
+    /*post.css*/
+    .post {
+        margin: 0 auto;
+        max-width: 458px;
+    }
+    .post h1 {
+        text-align: center;
+        font-size: 30px;
+        padding: 0;
+    }
+}

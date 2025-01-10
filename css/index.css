@@ -13,21 +13,3 @@
 
 @import url('./widget/widget.css');
 
-@import url('./blog/blog.css');
-@import url('./blog/pagination.css');
-
-@import url('./contact/contact.css');
-
-@import url('./error/error.css');
-
-@import url('./main/about.css');
-@import url('./main/brands.css');
-@import url('./main/newsletter.css');
-@import url('./main/slider.css');
-@import url('./main/stats.css');
-
-@import url('./portfolio/portfolio.css');
-
-@import url('./post/feedback_form.css');
-@import url('./post/post.css');
-

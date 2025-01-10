@@ -1,9 +1,12 @@
+/*error.css*/
+
 .error {
     position: relative;
     padding-top: 238px;
     padding-bottom: 309px;
     margin-top: 0;
 }
+
 .error_bg {
     position: absolute;
     right: 0;
@@ -11,6 +14,7 @@
     width: 47%;
     height: 100%;
 }
+
 .error__thumb {
     position: relative;
     overflow: hidden;
@@ -39,6 +43,7 @@
     margin-top: 0;
     margin-bottom: -38px;
 }
+
 .error__text {
     color: rgb(41, 47, 54);
     font-family: 'DM Serif Display', serif;
@@ -53,7 +58,7 @@
     padding: 26px 54px 26px 54px;
 }
 
-.error__submit > img {
+.error__submit>img {
     position: relative;
     right: -9px;
 }
