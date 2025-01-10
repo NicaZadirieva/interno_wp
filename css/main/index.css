@@ -158,7 +158,7 @@
 
 .swiper-feedback__text::before {
     content: "";
-    background-image: url("/img/icon/quote-icon-main.svg");
+    background-image: url("/wp/quote-icon-main");
     display: block;
     width: 31px;
     height: 23.5px;
@@ -193,7 +193,7 @@
 .swiper-feedback__next::after,
 .swiper-feedback__prev::after {
     content: "";
-    background-image: url("/img/icon/arrow-next-icon-2.svg");
+    background-image: url("/wp/arrow-next-icon-2");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
