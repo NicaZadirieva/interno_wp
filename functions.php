@@ -40,8 +40,31 @@ function interno_wp_theme_init() {
 
 add_action( 'after_setup_theme', 'interno_wp_theme_init', 0);
 
+function interno_wp_register_post_type() {
+	$args = array(
+		'label' => esc_html__('Settings'),
+		'labels' => array(
+			'name'               => 'Настройки параметров страниц', // основное название для типа записи
+			'singular_name'      => '', // название для одной записи этого типа
+			'edit_item'          => 'Редактирование ____', // для редактирования типа записи
+			'view_item'          => 'Смотреть ____', // для просмотра записи этого типа.
+			'search_items'       => 'Искать ____', // для поиска по этим типам записи
+		),
+		'supports' => array('custom-fields', 'revisions'),
+		'public' => true,
+		'public_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+        'has_archive' => true,
+		'show_in_rest' => true,
+		'menu_position' => 80,
+		'post_type' => 'settings'
 
+	);
+	register_post_type('Main_settings', $args);
+}
 
+add_action('init', 'interno_wp_register_post_type');
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );

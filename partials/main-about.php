@@ -7,12 +7,10 @@
 <?php
     /**TODO: сделать изменяемыми через wordpress */
     /** VARIABLES */
-    $about_title = 'We Create The Art Of Stylish Living Stylishly';
-    $about_text = 'It is a long established fact that a reader will be distracted by the of readable content of a
-                        page
-                        when lookings at its layouts the points of using
-                        that it has a more-or-less normal.';
-    $about_phone_number = '012345678';
+    $settings_meta = get_post_custom( 144 );
+    $about_title = $settings_meta['about_title'][0];
+    $about_text = $settings_meta['about_text'][0];
+    $about_phone_number = $settings_meta['about_phone_number'][0];
 
 ?>
 
