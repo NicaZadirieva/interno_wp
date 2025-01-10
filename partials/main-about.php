@@ -3,7 +3,13 @@
      * This is a about content for index.php
      * 
      */
+    $settings_mapping = array(
+        'about_phone_number' => 'Телефонный номер (не pretty)',
+        'about_title' => 'Заголовок в блоке about',
+        'about_text' => 'Текст в блоке about'
+    )
 ?>
+
 <?php
 
     /** VARIABLES */
@@ -15,9 +21,9 @@
     ], OBJECT )[0]->ID;
 
     $settings_meta = get_post_custom( $recent_metadata_id );
-    $about_title = $settings_meta['about_title'][0];
-    $about_text = $settings_meta['about_text'][0];
-    $about_phone_number = $settings_meta['about_phone_number'][0];
+    $about_title = $settings_meta[$settings_mapping['about_title']][0];
+    $about_text = $settings_meta[$settings_mapping['about_text']][0];
+    $about_phone_number = $settings_meta[$settings_mapping['about_phone_number']][0];
 
 ?>
 
